@@ -5,7 +5,7 @@ describe("Iteration 2", () => {
         
         // Each `it` block represents 1 test. You can use the following as a template:
         it("should be defined", () => {
-            expect(divide()).toBeDefined();
+            expect(divide(1,2)).toBeDefined();
         });
 
         it("should take two numbers as arguments", () => {
@@ -24,5 +24,11 @@ describe("Iteration 2", () => {
             expect(divide(62323,32313,323132)).toBeUndefined;
             
         })
+
+        it("should return undefined when arguments are not numbers", () => {
+            expect(divide("A",10)).toEqual(undefined);
+            expect(divide("A","B")).toEqual(undefined);
+            expect(divide(1,"C")).toEqual(undefined);
+        });
     })    
 })
